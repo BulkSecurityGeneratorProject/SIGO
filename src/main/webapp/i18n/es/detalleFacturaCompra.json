@@ -1,0 +1,23 @@
+{
+    "sigoApp": {
+        "detalleFacturaCompra" : {
+            "home": {
+                "title": "Detalle Factura Compras",
+                "createLabel": "Crear nuevo Detalle Factura Compra",
+                "createOrEditLabel": "Crear o editar Detalle Factura Compra"
+            },
+            "created": "Un nuevo Detalle Factura Compra ha sido creado con el identificador {{ param }}",
+            "updated": "Un Detalle Factura Compra ha sido actualizado con el identificador {{ param }}",
+            "deleted": "Un Detalle Factura Compra ha sido eliminado con el identificador {{ param }}",
+            "delete": {
+                "question": "¿Seguro que quiere eliminar Detalle Factura Compra {{ id }}?"
+            },
+            "detail": {
+                "title": "Detalle Factura Compra"
+            },
+            "cantidadRecibida": "Cantidad Recibida",
+            "insumos": "Insumos",
+            "facturaCompra": "Factura Compra"
+        }
+    }
+}

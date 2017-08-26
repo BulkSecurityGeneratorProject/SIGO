@@ -1,0 +1,44 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myDetallePedidoLabel" data-translate="sigoApp.detallePedido.home.createOrEditLabel">Create or edit a Detalle Pedido</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.detallePedido.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.detallePedido.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="sigoApp.detallePedido.cantidadPedida" for="field_cantidadPedida">Cantidad Pedida</label>
+            <input type="number" class="form-control" name="cantidadPedida" id="field_cantidadPedida"
+                    ng-model="vm.detallePedido.cantidadPedida"
+                    />
+        </div>
+
+        <div class="form-group">
+            <label data-translate="sigoApp.detallePedido.pedido" for="field_pedido">Pedido</label>
+            <select class="form-control" id="field_pedido" name="pedido" ng-model="vm.detallePedido.pedido" ng-options="pedido as pedido.id for pedido in vm.pedidos track by pedido.id">
+                <option value=""></option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label data-translate="sigoApp.detallePedido.insumos" for="field_insumos">Insumos</label>
+            <select class="form-control" id="field_insumos" name="insumos" ng-model="vm.detallePedido.insumos" ng-options="insumos as insumos.id for insumos in vm.insumos track by insumos.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

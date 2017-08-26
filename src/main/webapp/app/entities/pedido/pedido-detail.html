@@ -1,0 +1,31 @@
+
+<div>
+    <h2><span data-translate="sigoApp.pedido.detail.title">Pedido</span> {{vm.pedido.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="sigoApp.pedido.cantidad">Cantidad</span></dt>
+        <dd>
+            <span>{{vm.pedido.cantidad}}</span>
+        </dd>
+        <dt><span data-translate="sigoApp.pedido.estado">Estado</span></dt>
+        <dd>
+            <span>{{vm.pedido.estado}}</span>
+        </dd>
+        <dt><span data-translate="sigoApp.pedido.proveedor">Proveedor</span></dt>
+        <dd>
+            <a ui-sref="proveedor-detail({id:vm.pedido.proveedor.id})">{{vm.pedido.proveedor.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="pedido-detail.edit({id:vm.pedido.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

@@ -1,0 +1,56 @@
+entity Proveedor {
+	razonSocial String,
+    ruc String,
+    direccion String,
+    correo_electronico String,
+    telefono String
+}
+
+entity Pedido {
+	cantidad Integer,
+    estado String
+}
+
+entity DetallePedido {
+	cantidadPedida Integer
+}
+
+entity Insumos {
+	marca String,
+    descripcion String,
+    categoria String,
+    observaciones String,
+    codigo String,
+    stock Integer
+}
+
+entity FacturaCompra {
+	costo Integer
+}
+
+entity DetalleFacturaCompra {
+	cantidadRecibida Integer
+}
+
+
+relationship ManyToOne {
+	Pedido{proveedor} to Proveedor{pedido}
+}
+relationship ManyToOne {
+	FacturaCompra{proveedor} to Proveedor{facturaCompra}
+}
+relationship ManyToOne {
+	FacturaCompra{pedido} to Pedido{facturaCompra}
+}
+relationship ManyToOne {
+	DetallePedido{pedido} to Pedido{detallePedido}
+}
+relationship ManyToOne {
+	DetallePedido{insumos} to Insumos{detallePedido}
+}
+relationship ManyToOne {
+	DetalleFacturaCompra{insumos} to Insumos{detalleFactura}
+}
+relationship ManyToOne {
+	DetalleFacturaCompra{facturaCompra} to FacturaCompra{detalleFactura}
+}

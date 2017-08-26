@@ -1,0 +1,28 @@
+{
+    "sigoApp": {
+        "insumos" : {
+            "home": {
+                "title": "Insumos",
+                "createLabel": "Create a new Insumos",
+                "createOrEditLabel": "Create or edit a Insumos"
+            },
+            "created": "A new Insumos is created with identifier {{ param }}",
+            "updated": "A Insumos is updated with identifier {{ param }}",
+            "deleted": "A Insumos is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Insumos {{ id }}?"
+            },
+            "detail": {
+                "title": "Insumos"
+            },
+            "marca": "Marca",
+            "descripcion": "Descripcion",
+            "categoria": "Categoria",
+            "observaciones": "Observaciones",
+            "codigo": "Codigo",
+            "stock": "Stock",
+            "detallePedido": "Detalle Pedido",
+            "detalleFactura": "Detalle Factura"
+        }
+    }
+}

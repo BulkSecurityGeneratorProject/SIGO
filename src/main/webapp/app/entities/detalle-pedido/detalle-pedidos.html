@@ -1,0 +1,64 @@
+<div>
+    <h2 data-translate="sigoApp.detallePedido.home.title">Detalle Pedidos</h2>
+    <jhi-alert></jhi-alert>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-4 no-padding-left">
+                <button class="btn btn-primary" ui-sref="detalle-pedido.new" >
+                    <span class="glyphicon glyphicon-plus"></span>
+                    <span  data-translate="sigoApp.detallePedido.home.createLabel">
+                        Create new Detalle Pedido
+                    </span>
+                </button>
+            </div>
+        </div>
+    </div>
+    <br/>
+    <div class="table-responsive">
+        <table class="jh-table table table-striped">
+            <thead>
+                <tr>
+                    <th><span data-translate="global.field.id">ID</span></th>
+                    <th><span data-translate="sigoApp.detallePedido.cantidadPedida">Cantidad Pedida</span></th>
+                    <th><span data-translate="sigoApp.detallePedido.pedido">Pedido</span></th>
+                    <th><span data-translate="sigoApp.detallePedido.insumos">Insumos</span></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="detallePedido in vm.detallePedidos track by detallePedido.id">
+                    <td><a ui-sref="detalle-pedido-detail({id:detallePedido.id})">{{detallePedido.id}}</a></td>
+                    <td>{{detallePedido.cantidadPedida}}</td>
+                    <td>
+                        <a ui-sref="pedido-detail({id:detallePedido.pedido.id})">{{detallePedido.pedido.id}}</a>
+                    </td>
+                    <td>
+                        <a ui-sref="insumos-detail({id:detallePedido.insumos.id})">{{detallePedido.insumos.id}}</a>
+                    </td>
+                    <td class="text-right">
+                        <div class="btn-group flex-btn-group-container">
+                            <button type="submit"
+                                    ui-sref="detalle-pedido-detail({id:detallePedido.id})"
+                                    class="btn btn-info btn-sm">
+                                <span class="glyphicon glyphicon-eye-open"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.view"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="detalle-pedido.edit({id:detallePedido.id})"
+                                    class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.edit"></span>
+                            </button>
+                            <button type="submit"
+                                    ui-sref="detalle-pedido.delete({id:detallePedido.id})"
+                                    class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-remove-circle"></span>
+                                <span class="hidden-sm-down" data-translate="entity.action.delete"></span>
+                            </button>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

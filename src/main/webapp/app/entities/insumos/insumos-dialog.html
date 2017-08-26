@@ -1,0 +1,62 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myInsumosLabel" data-translate="sigoApp.insumos.home.createOrEditLabel">Create or edit a Insumos</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.insumos.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.insumos.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="sigoApp.insumos.marca" for="field_marca">Marca</label>
+            <input type="text" class="form-control" name="marca" id="field_marca"
+                    ng-model="vm.insumos.marca"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="sigoApp.insumos.descripcion" for="field_descripcion">Descripcion</label>
+            <input type="text" class="form-control" name="descripcion" id="field_descripcion"
+                    ng-model="vm.insumos.descripcion"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="sigoApp.insumos.categoria" for="field_categoria">Categoria</label>
+            <input type="text" class="form-control" name="categoria" id="field_categoria"
+                    ng-model="vm.insumos.categoria"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="sigoApp.insumos.observaciones" for="field_observaciones">Observaciones</label>
+            <input type="text" class="form-control" name="observaciones" id="field_observaciones"
+                    ng-model="vm.insumos.observaciones"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="sigoApp.insumos.codigo" for="field_codigo">Codigo</label>
+            <input type="text" class="form-control" name="codigo" id="field_codigo"
+                    ng-model="vm.insumos.codigo"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="sigoApp.insumos.stock" for="field_stock">Stock</label>
+            <input type="number" class="form-control" name="stock" id="field_stock"
+                    ng-model="vm.insumos.stock"
+                    />
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

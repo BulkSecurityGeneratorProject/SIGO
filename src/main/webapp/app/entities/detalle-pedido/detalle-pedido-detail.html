@@ -1,0 +1,31 @@
+
+<div>
+    <h2><span data-translate="sigoApp.detallePedido.detail.title">Detalle Pedido</span> {{vm.detallePedido.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="sigoApp.detallePedido.cantidadPedida">Cantidad Pedida</span></dt>
+        <dd>
+            <span>{{vm.detallePedido.cantidadPedida}}</span>
+        </dd>
+        <dt><span data-translate="sigoApp.detallePedido.pedido">Pedido</span></dt>
+        <dd>
+            <a ui-sref="pedido-detail({id:vm.detallePedido.pedido.id})">{{vm.detallePedido.pedido.id}}</a>
+        </dd>
+        <dt><span data-translate="sigoApp.detallePedido.insumos">Insumos</span></dt>
+        <dd>
+            <a ui-sref="insumos-detail({id:vm.detallePedido.insumos.id})">{{vm.detallePedido.insumos.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="detalle-pedido-detail.edit({id:vm.detallePedido.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

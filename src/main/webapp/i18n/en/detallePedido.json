@@ -1,0 +1,23 @@
+{
+    "sigoApp": {
+        "detallePedido" : {
+            "home": {
+                "title": "Detalle Pedidos",
+                "createLabel": "Create a new Detalle Pedido",
+                "createOrEditLabel": "Create or edit a Detalle Pedido"
+            },
+            "created": "A new Detalle Pedido is created with identifier {{ param }}",
+            "updated": "A Detalle Pedido is updated with identifier {{ param }}",
+            "deleted": "A Detalle Pedido is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Detalle Pedido {{ id }}?"
+            },
+            "detail": {
+                "title": "Detalle Pedido"
+            },
+            "cantidadPedida": "Cantidad Pedida",
+            "pedido": "Pedido",
+            "insumos": "Insumos"
+        }
+    }
+}

@@ -1,0 +1,31 @@
+
+<div>
+    <h2><span data-translate="sigoApp.detalleFacturaCompra.detail.title">Detalle Factura Compra</span> {{vm.detalleFacturaCompra.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="sigoApp.detalleFacturaCompra.cantidadRecibida">Cantidad Recibida</span></dt>
+        <dd>
+            <span>{{vm.detalleFacturaCompra.cantidadRecibida}}</span>
+        </dd>
+        <dt><span data-translate="sigoApp.detalleFacturaCompra.insumos">Insumos</span></dt>
+        <dd>
+            <a ui-sref="insumos-detail({id:vm.detalleFacturaCompra.insumos.id})">{{vm.detalleFacturaCompra.insumos.id}}</a>
+        </dd>
+        <dt><span data-translate="sigoApp.detalleFacturaCompra.facturaCompra">Factura Compra</span></dt>
+        <dd>
+            <a ui-sref="factura-compra-detail({id:vm.detalleFacturaCompra.facturaCompra.id})">{{vm.detalleFacturaCompra.facturaCompra.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="detalle-factura-compra-detail.edit({id:vm.detalleFacturaCompra.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

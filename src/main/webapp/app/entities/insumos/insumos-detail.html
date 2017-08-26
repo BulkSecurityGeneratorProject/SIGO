@@ -1,0 +1,43 @@
+
+<div>
+    <h2><span data-translate="sigoApp.insumos.detail.title">Insumos</span> {{vm.insumos.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="sigoApp.insumos.marca">Marca</span></dt>
+        <dd>
+            <span>{{vm.insumos.marca}}</span>
+        </dd>
+        <dt><span data-translate="sigoApp.insumos.descripcion">Descripcion</span></dt>
+        <dd>
+            <span>{{vm.insumos.descripcion}}</span>
+        </dd>
+        <dt><span data-translate="sigoApp.insumos.categoria">Categoria</span></dt>
+        <dd>
+            <span>{{vm.insumos.categoria}}</span>
+        </dd>
+        <dt><span data-translate="sigoApp.insumos.observaciones">Observaciones</span></dt>
+        <dd>
+            <span>{{vm.insumos.observaciones}}</span>
+        </dd>
+        <dt><span data-translate="sigoApp.insumos.codigo">Codigo</span></dt>
+        <dd>
+            <span>{{vm.insumos.codigo}}</span>
+        </dd>
+        <dt><span data-translate="sigoApp.insumos.stock">Stock</span></dt>
+        <dd>
+            <span>{{vm.insumos.stock}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="insumos-detail.edit({id:vm.insumos.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>
