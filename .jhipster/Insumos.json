@@ -1,0 +1,48 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "detallePedido",
+            "otherEntityName": "detallePedido",
+            "otherEntityRelationshipName": "insumos"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "detalleFactura",
+            "otherEntityName": "detalleFacturaCompra",
+            "otherEntityRelationshipName": "insumos"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "marca",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "descripcion",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "categoria",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "observaciones",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "codigo",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "stock",
+            "fieldType": "Integer"
+        }
+    ],
+    "changelogDate": "20170823032507",
+    "entityTableName": "insumos",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no"
+}

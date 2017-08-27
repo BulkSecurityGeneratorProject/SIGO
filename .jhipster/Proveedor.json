@@ -1,0 +1,44 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "pedido",
+            "otherEntityName": "pedido",
+            "otherEntityRelationshipName": "proveedor"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "facturaCompra",
+            "otherEntityName": "facturaCompra",
+            "otherEntityRelationshipName": "proveedor"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "razonSocial",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "ruc",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "direccion",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "correoelectronico",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "telefono",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20170823032504",
+    "entityTableName": "proveedor",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no"
+}

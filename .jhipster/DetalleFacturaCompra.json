@@ -1,0 +1,28 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "insumos",
+            "otherEntityName": "insumos",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "facturaCompra",
+            "otherEntityName": "facturaCompra",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "cantidadRecibida",
+            "fieldType": "Integer"
+        }
+    ],
+    "changelogDate": "20170823032509",
+    "entityTableName": "detalle_factura_compra",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no"
+}

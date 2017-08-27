@@ -1,0 +1,34 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "proveedor",
+            "otherEntityName": "proveedor",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "pedido",
+            "otherEntityName": "pedido",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "detalleFactura",
+            "otherEntityName": "detalleFacturaCompra",
+            "otherEntityRelationshipName": "facturaCompra"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "costo",
+            "fieldType": "Integer"
+        }
+    ],
+    "changelogDate": "20170823032508",
+    "entityTableName": "factura_compra",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no"
+}

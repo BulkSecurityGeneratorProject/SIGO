@@ -1,0 +1,38 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "proveedor",
+            "otherEntityName": "proveedor",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "facturaCompra",
+            "otherEntityName": "facturaCompra",
+            "otherEntityRelationshipName": "pedido"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "detallePedido",
+            "otherEntityName": "detallePedido",
+            "otherEntityRelationshipName": "pedido"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "cantidad",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "estado",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20170823032505",
+    "entityTableName": "pedido",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no"
+}

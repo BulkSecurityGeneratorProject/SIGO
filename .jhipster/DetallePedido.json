@@ -1,0 +1,28 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "pedido",
+            "otherEntityName": "pedido",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "insumos",
+            "otherEntityName": "insumos",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "cantidadPedida",
+            "fieldType": "Integer"
+        }
+    ],
+    "changelogDate": "20170823032506",
+    "entityTableName": "detalle_pedido",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no"
+}
